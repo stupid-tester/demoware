@@ -24,7 +24,7 @@ function importNumber() {
 
     // Check if the input is empty.
     if (phoneNumber === '') {
-        messageElement.textContent = 'Please enter a phone number.';
+        messageElement.textContent = 'Vui lòng nhập số điện thoại.';
         messageElement.className = 'error';
         return;
     }
@@ -32,7 +32,7 @@ function importNumber() {
     // Check if the phone number already exists in our Set.
     if (enteredPhoneNumbers.has(phoneNumber)) {
         // If it exists, display a duplicate message.
-        messageElement.textContent = 'The phone number is duplicated.';
+        messageElement.textContent = 'Số điện thoại này đã được nhận thưởng, không nhận lại.';
         messageElement.className = 'error';
     } else {
         // If it's a new number, add it to the Set.
@@ -42,7 +42,7 @@ function importNumber() {
         saveNumbersToLocalStorage();
 
         // Display a success message.
-        messageElement.textContent = 'Entered successfully.';
+        messageElement.textContent = 'Số điện thoại này sẽ được nhận thưởng.';
         messageElement.className = 'success';
     }
 
